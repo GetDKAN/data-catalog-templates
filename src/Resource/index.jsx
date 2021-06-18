@@ -5,6 +5,7 @@ import { ResourceDispatch } from './helpers';
 
 const Resource = ({ distribution, rootUrl, children, options }) => {
   const { identifier } = distribution;
+  console.log(identifier)
   const { 
     loading,
     values,
@@ -31,7 +32,7 @@ const Resource = ({ distribution, rootUrl, children, options }) => {
   useEffect(() => {
     setOffset(0)
   }, [limit])
-
+  console.log(values)
   return (
     <ResourceDispatch.Provider value={{
       loading: loading,

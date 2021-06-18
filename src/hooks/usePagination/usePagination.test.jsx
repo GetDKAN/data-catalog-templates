@@ -5,7 +5,6 @@ import usePagination from './';
 describe('usePagination custom hook', () => {
   test('returns pagination', () => {
     const { result } = renderHook(() => usePagination(0, 12, 5))
-    console.log(result.current)
     expect(result.current.pageIndex).toEqual(0);
     expect(result.current.pages).toEqual(3);
     act(() => { result.current.setPageIndex(2) });
